@@ -1,10 +1,6 @@
 # Devuan Live ISO Builder
 
-> [!WARNING]  
-> The ISOs generated in this repository are for testing and may contain known issues.
-
-This repository builds a Devuan Live ISO using live-build, similar to the [gershwin-on-debian](https://github.com/gershwin-desktop/gershwin-on-debian) project but using Devuan instead of Debian.
-
+This repository builds a Devuan Live ISO using live-build on GitHub Actions.
 ## Features
 
 - Based on Devuan Chimaera (Devuan 4)
@@ -31,34 +27,7 @@ To build the ISO locally:
 sudo ./build.sh
 ```
 
-The build script will:
-1. Install required dependencies (live-build, debootstrap)
-2. Set up Devuan-specific debootstrap scripts
-3. Install Devuan keyring for package verification
-4. Configure live-build using the config files
-5. Build the ISO (this may take 30-60 minutes)
-
 The resulting ISO will be in the current directory.
-
-## Manual Build
-
-If you prefer to build manually:
-
-```bash
-# Install live-build
-sudo apt-get install live-build debootstrap
-
-# Create symlink for Devuan chimaera script
-sudo ln -sf sid /usr/share/debootstrap/scripts/chimaera
-
-# Install Devuan keyring (optional, for package verification)
-wget http://pkgmaster.devuan.org/devuan/pool/main/d/devuan-keyring/devuan-keyring_2023.10.07_all.deb
-sudo dpkg -i devuan-keyring_2023.10.07_all.deb
-
-# Configure and build
-sudo lb config
-sudo lb build
-```
 
 ## Configuration
 
@@ -94,12 +63,6 @@ The Live ISO includes:
 - Graphics drivers for Intel, AMD, and common hardware
 - Plymouth boot splash
 - Standard system utilities
-
-## Requirements
-
-- Debian or Ubuntu-based host system (for building)
-- At least 10 GB free disk space
-- Root/sudo access for building
 - Internet connection to download packages
 
 ## References
