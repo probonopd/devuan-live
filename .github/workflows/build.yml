@@ -32,10 +32,16 @@ jobs:
 
       - name: Install Devuan keyring
         run: |
-          # Download and install devuan-keyring
-          cd /tmp
-          wget http://deb.devuan.org/devuan/pool/main/d/devuan-keyring/devuan-keyring_2023.05.28_all.deb 
-          dpkg -i devuan-keyring_2023.05.28_all.deb || apt-get install -y -f
+          # Get Devuan keyring directly from the release file
+          mkdir -p /usr/share/keyrings
+          # Download the Devuan signing key directly
+          wget -O- https://pkgmaster.devuan.org/devuan/pool/main/d/devuan-keyring/devuan-keyring_2023.10.07_all.deb | \
+            dpkg -i - || \
+          wget -O- https://deb.devuan.org/devuan/pool/main/d/devuan-keyring/devuan-keyring_2023.10.07_all.deb | \
+            dpkg -i - || \
+          ( apt-get update && apt-get install -y gnupg && \
+            gpg --no-default-keyring --keyring /usr/share/keyrings/devuan-archive-keyring.gpg \
+            --keyserver keyserver.ubuntu.com --recv-keys 94532124541922FB )
 
       - name: Configure live-build
         run: |
