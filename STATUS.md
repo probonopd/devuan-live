@@ -19,7 +19,7 @@ This repository has been set up with a complete Devuan Live ISO build configurat
    - `config/package-lists/plymouth.list.chroot` - Boot splash
 
 3. **Build Configuration:**
-   - `config/bootloaders/syslinux/syslinux.cfg` - Bootloader settings
+   - `config/binary` - Boot parameters including `boot=live` for live-boot
    - `config/hooks/normal/020-plymouth-theme.chroot` - Plymouth theme setup
    - `config/includes.chroot/etc/default/grub` - GRUB configuration
 
