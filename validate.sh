@@ -82,11 +82,11 @@ fi
 echo ""
 echo "Checking distribution settings..."
 
-# Check if distribution is set to chimaera
-if grep -q "LB_DISTRIBUTION=\"chimaera\"" config/bootstrap; then
-    pass "Distribution set to chimaera"
+# Check if distribution is set to excalibur
+if grep -q "LB_DISTRIBUTION=\"excalibur\"" config/bootstrap; then
+    pass "Distribution set to excalibur"
 else
-    fail "Distribution not set to chimaera"
+    fail "Distribution not set to excalibur"
 fi
 
 # Check if mirrors point to Devuan
@@ -116,10 +116,10 @@ fi
 echo ""
 echo "Checking debootstrap scripts..."
 
-if [ -f /usr/share/debootstrap/scripts/chimaera ] || [ -L /usr/share/debootstrap/scripts/chimaera ]; then
-    pass "Chimaera debootstrap script exists"
+if [ -f /usr/share/debootstrap/scripts/excalibur ] || [ -L /usr/share/debootstrap/scripts/excalibur ]; then
+    pass "Excalibur debootstrap script exists"
 else
-    fail "Chimaera debootstrap script missing (run: sudo ln -sf sid /usr/share/debootstrap/scripts/chimaera)"
+    fail "Excalibur debootstrap script missing (run: sudo ln -sf sid /usr/share/debootstrap/scripts/excalibur)"
 fi
 
 echo ""

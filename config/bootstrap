@@ -22,16 +22,16 @@ LB_BOOTSTRAP_FLAVOUR=""
 LB_BOOTSTRAP_KEYRING=""
 
 # $LB_DISTRIBUTION: select distribution to use
-# (Default: chimaera)
-LB_DISTRIBUTION="chimaera"
+# (Default: excalibur)
+LB_DISTRIBUTION="excalibur"
 
 # $LB_PARENT_DISTRIBUTION: select parent distribution to use
-# (Default: chimaera)
-LB_PARENT_DISTRIBUTION="chimaera"
+# (Default: excalibur)
+LB_PARENT_DISTRIBUTION="excalibur"
 
 # $LB_PARENT_DEBIAN_INSTALLER_DISTRIBUTION: select parent distribution for debian-installer to use
-# (Default: chimaera)
-LB_PARENT_DEBIAN_INSTALLER_DISTRIBUTION="chimaera"
+# (Default: excalibur)
+LB_PARENT_DEBIAN_INSTALLER_DISTRIBUTION="excalibur"
 
 # $LB_PARENT_MIRROR_BOOTSTRAP: set parent mirror to bootstrap from
 # (Default: http://pkgmaster.devuan.org/merged/)
