@@ -13,9 +13,36 @@ This repository builds a Devuan Live ISO using live-build, similar to the [gersh
 - Auto-configured with live-boot
 - Built with GitHub Actions CI/CD
 
-## Building Locally
+## Quick Start
 
-To build the ISO locally, you need to install `live-build` and run:
+### Validate Configuration
+
+To verify that the configuration is correct and ready to build:
+
+```bash
+./validate.sh
+```
+
+### Build ISO
+
+To build the ISO locally:
+
+```bash
+sudo ./build.sh
+```
+
+The build script will:
+1. Install required dependencies (live-build, debootstrap)
+2. Set up Devuan-specific debootstrap scripts
+3. Install Devuan keyring for package verification
+4. Configure live-build using the config files
+5. Build the ISO (this may take 30-60 minutes)
+
+The resulting ISO will be in the current directory.
+
+## Manual Build
+
+If you prefer to build manually:
 
 ```bash
 # Install live-build
@@ -33,8 +60,6 @@ sudo lb config
 sudo lb build
 ```
 
-The resulting ISO will be in the current directory.
-
 ## Configuration
 
 The configuration is stored in the `config/` directory:
@@ -48,13 +73,34 @@ The configuration is stored in the `config/` directory:
 
 ## GitHub Actions Build
 
-The workflow automatically builds the ISO when changes are pushed. The build process:
+The workflow automatically builds the ISO when changes are pushed to this repository. The build process:
 1. Sets up a Debian container with privileged access
 2. Installs build dependencies (live-build, debootstrap)
 3. Sets up Devuan-specific debootstrap scripts
 4. Installs Devuan keyring for package verification
 5. Runs `lb build` to create the ISO
 6. Uploads the resulting ISO as a release artifact
+
+> [!NOTE]
+> GitHub Actions workflows require approval for first-time runs in new repositories.
+> Once approved by a repository administrator, subsequent runs will execute automatically.
+
+## Included Software
+
+The Live ISO includes:
+- XFCE desktop environment with common utilities
+- Firefox ESR web browser
+- Network Manager for easy network configuration
+- Graphics drivers for Intel, AMD, and common hardware
+- Plymouth boot splash
+- Standard system utilities
+
+## Requirements
+
+- Debian or Ubuntu-based host system (for building)
+- At least 10 GB free disk space
+- Root/sudo access for building
+- Internet connection to download packages
 
 ## References
 
