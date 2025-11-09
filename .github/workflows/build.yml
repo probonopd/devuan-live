@@ -1,0 +1,53 @@
+name: Build Devuan Live ISO
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-iso:
+    runs-on: ubuntu-24.04
+    container:
+      image: debian:latest
+      volumes:
+        - /proc:/proc
+      options: --privileged
+    name: Devuan Live ISO Build
+    steps:
+      - name: Install dependencies
+        run: |
+          apt update
+          apt install -y git sudo live-build curl debootstrap
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure live-build
+        run: |
+          lb config --debian-installer live \
+                    --distribution chimaera \
+                    --archive-areas "main contrib non-free" \
+                    --initramfs live-boot \
+                    --mirror-bootstrap http://pkgmaster.devuan.org/merged/ \
+                    --mirror-chroot http://pkgmaster.devuan.org/merged/ \
+                    --mirror-binary http://pkgmaster.devuan.org/merged/ \
+                    --bootappend-live "boot=live components quiet splash"
+
+      - name: Build the ISO
+        run: |
+          lb build
+          iso_file=$(ls *.iso | head -n 1)
+          date_str=$(date +%Y.%m.%d)
+          mv "$iso_file" "devuan-live-${date_str}-amd64.iso"
+
+      - name: Upload files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          ls -lh *.iso
+          wget -c https://github.com/probonopd/uploadtool/raw/master/upload.sh
+          bash upload.sh *.iso

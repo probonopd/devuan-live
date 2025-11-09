@@ -1,0 +1,40 @@
+curl
+lsb-release
+tar
+sudo
+xterm
+git
+wget
+nano
+
+# At least one shell must be installed
+bash
+
+# Brings up xterm on X11 on boot by default
+xinit
+
+# killall
+psmisc
+
+# xkill
+x11-utils
+
+# Desktop environment
+xfce4
+xfce4-goodies
+lightdm
+
+# File manager
+thunar
+
+# Text editor
+mousepad
+
+# Terminal
+xfce4-terminal
+
+# Web browser
+firefox-esr
+
+# Network manager
+network-manager-gnome
