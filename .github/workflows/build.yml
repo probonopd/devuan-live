@@ -34,9 +34,8 @@ jobs:
         run: |
           # Download and install devuan-keyring
           cd /tmp
-          wget http://pkgmaster.devuan.org/devuan/pool/main/d/devuan-keyring/devuan-keyring_2023.10.07_all.deb || \
-          wget http://deb.devuan.org/devuan/pool/main/d/devuan-keyring/devuan-keyring_2023.10.07_all.deb
-          dpkg -i devuan-keyring_2023.10.07_all.deb || apt-get install -y -f
+          wget http://deb.devuan.org/devuan/pool/main/d/devuan-keyring/devuan-keyring_2023.05.28_all.deb 
+          dpkg -i devuan-keyring_2023.05.28_all.deb || apt-get install -y -f
 
       - name: Configure live-build
         run: |
