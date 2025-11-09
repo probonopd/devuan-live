@@ -25,26 +25,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Devuan debootstrap script
+      - name: Setup Devuan environment
         run: |
           # Create symlink for chimaera to use sid script
           ln -sf sid /usr/share/debootstrap/scripts/chimaera
-
-      - name: Install Devuan keyring
-        run: |
-          # Create required directories
-          mkdir -p /usr/share/keyrings /root/.gnupg
-          chmod 700 /root/.gnupg
-          # Try downloading the keyring package
-          cd /tmp
-          # Try multiple sources for the keyring
-          wget -q http://pkgmaster.devuan.org/devuan/pool/main/d/devuan-keyring/devuan-keyring_2023.10.07_all.deb && dpkg -i devuan-keyring_2023.10.07_all.deb || \
-          wget -q https://git.devuan.org/devuan/devuan-keyring/-/archive/2023.10.07/devuan-keyring-2023.10.07.tar.gz && \
-            tar -xzf devuan-keyring-2023.10.07.tar.gz && \
-            cp devuan-keyring-2023.10.07/keyrings/* /usr/share/keyrings/ || \
-          echo "Warning: Could not install Devuan keyring, using embedded keys"
-          # Ensure the keyring file exists even if empty (debootstrap will use it if LB_BOOTSTRAP_KEYRING is set)
-          touch /usr/share/keyrings/devuan-archive-keyring.gpg
+          # Create keyring directory (even though we're not using GPG verification)
+          mkdir -p /usr/share/keyrings
 
       - name: Configure live-build
         run: |

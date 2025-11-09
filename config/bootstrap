@@ -18,7 +18,8 @@ LB_BOOTSTRAP_FLAVOUR=""
 
 # $LB_BOOTSTRAP_KEYRING: set distribution keyring
 # (Default: empty)
-LB_BOOTSTRAP_KEYRING="/usr/share/keyrings/devuan-archive-keyring.gpg"
+# Note: Leaving empty to avoid signature verification issues with Devuan mirrors
+LB_BOOTSTRAP_KEYRING=""
 
 # $LB_DISTRIBUTION: select distribution to use
 # (Default: chimaera)
