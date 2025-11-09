@@ -1,6 +1,9 @@
 # Devuan Live ISO Builder
 
 This repository builds a Devuan Live ISO using live-build on GitHub Actions.
+
+<img width="767" height="439" alt="image" src="https://github.com/user-attachments/assets/257c832d-079f-454b-926f-e0e625830450" />
+
 ## Features
 
 - Based on Devuan Chimaera (Devuan 4)
