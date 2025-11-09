@@ -1,0 +1,8 @@
+xserver-xorg-video-all
+mesa-utils
+mesa-vulkan-drivers
+libva2
+
+# Graphics drivers for common hardware
+xserver-xorg-video-intel
+xserver-xorg-video-amdgpu

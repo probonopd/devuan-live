@@ -1,0 +1,35 @@
+# live-build artifacts
+.build/
+.stage/
+auto/
+binary/
+binary.contents
+binary.log
+cache/
+chroot/
+chroot.files
+chroot.packages.install
+chroot.packages.live
+config/binary_*
+config/chroot_*
+config/includes.binary/
+config/packages/
+config/packages.binary/
+config/packages.chroot/
+*.iso
+*.img
+*.hybrid.iso
+*.contents
+*.packages
+*.files
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
