@@ -6,7 +6,7 @@ This repository builds a Devuan Live ISO using live-build on GitHub Actions.
 
 ## Features
 
-- Based on Devuan Chimaera (Devuan 4)
+- Based on Devuan Daedalus (Devuan 5)
 - Uses sysvinit instead of systemd
 - Includes XFCE desktop environment
 - Auto-configured with live-boot
