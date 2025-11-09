@@ -38,10 +38,9 @@ The configuration is stored in the `config/` directory:
 - `config/bootstrap` - Bootstrap configuration (Devuan mirrors, distribution)
 - `config/common` - Common build settings
 - `config/chroot` - Chroot stage settings
-- `config/binary` - Binary/ISO stage settings
+- `config/binary` - Binary/ISO stage settings (includes boot parameters)
 - `config/package-lists/` - Package lists to install
 - `config/hooks/` - Custom scripts to run during build
-- `config/bootloaders/` - Bootloader configuration
 
 ## GitHub Actions Build
 

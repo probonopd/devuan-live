@@ -72,10 +72,11 @@ fi
 echo ""
 echo "Checking bootloader configuration..."
 
-if [ -f config/bootloaders/syslinux/syslinux.cfg ]; then
-    pass "Syslinux configuration exists"
+# Check if boot=live is in boot parameters (required for live-boot)
+if grep -q 'LB_BOOTAPPEND_LIVE=.*boot=live' config/binary; then
+    pass "Boot parameters include 'boot=live'"
 else
-    fail "Syslinux configuration missing"
+    fail "Boot parameters missing 'boot=live' (required for live-boot)"
 fi
 
 echo ""
