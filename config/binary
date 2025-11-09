@@ -66,7 +66,7 @@ LB_DEBIAN_INSTALLER_GUI="false"
 LB_GRUB_SPLASH=""
 
 # $LB_HDD_LABEL: set hdd label
-# (Default: DEBIAN)
+# (Default: DEVUAN)
 LB_HDD_LABEL="DEVUAN"
 
 # $LB_HDD_SIZE: set hdd filesystem size
@@ -74,20 +74,20 @@ LB_HDD_LABEL="DEVUAN"
 LB_HDD_SIZE="10000"
 
 # $LB_ISO_APPLICATION: set iso author
-# (Default: Debian Live)
+# (Default: Devuan Live)
 LB_ISO_APPLICATION="Devuan Live"
 
 # $LB_ISO_PREPARER: set iso preparer
-# (Default: live-build $VERSION; http://packages.qa.debian.org/live-build)
-LB_ISO_PREPARER="live-build $VERSION; http://packages.qa.debian.org/live-build"
+# (Default: live-build 3.0~a57-1; http://packages.qa.debian.org/live-build)
+LB_ISO_PREPARER="live-build 3.0~a57-1; http://packages.qa.debian.org/live-build"
 
 # $LB_ISO_PUBLISHER: set iso publisher
-# (Default: Devuan Live project)
+# (Default: Devuan Live project; https://devuan.org/)
 LB_ISO_PUBLISHER="Devuan Live project; https://devuan.org/"
 
 # $LB_ISO_VOLUME: set iso volume (max 32 chars)
-# (Default: Devuan chimaera $(date +%Y%m%d-%H:%M))
-LB_ISO_VOLUME="Devuan $(date +%Y%m%d-%H:%M)"
+# (Default: Devuan 20251109-20:46)
+LB_ISO_VOLUME="Devuan 20251109-20:46"
 
 # $LB_EXT_BLOCKSIZE: set EXT block size
 # (Default: unset)
@@ -110,8 +110,8 @@ LB_JFFS2_ERASEBLOCK=""
 LB_MEMTEST="memtest86+"
 
 # $LB_WIN32_LOADER: set win32-loader
-# (Default: )
-LB_WIN32_LOADER=""
+# (Default: true)
+LB_WIN32_LOADER="true"
 
 # $LB_NET_ROOT_FILESYSTEM: set netboot filesystem
 # (Default: nfs)
@@ -122,7 +122,7 @@ LB_NET_ROOT_FILESYSTEM="nfs"
 LB_NET_ROOT_MOUNTOPTIONS=""
 
 # $LB_NET_ROOT_PATH: set netboot server directory
-# (Default: /srv/debian-live)
+# (Default: /srv/devuan-live)
 LB_NET_ROOT_PATH="/srv/devuan-live"
 
 # $LB_NET_ROOT_SERVER: set netboot server address
@@ -166,5 +166,5 @@ LB_SWAP_FILE_PATH=""
 LB_SWAP_FILE_SIZE="512"
 
 # $LB_SYSLINUX_THEME: set syslinux theme package
-# (Default: empty)
-LB_SYSLINUX_THEME=""
+# (Default: live-build)
+LB_SYSLINUX_THEME="live-build"

@@ -64,15 +64,15 @@ LB_DEBCONF_NOWARNINGS="yes"
 LB_DEBCONF_PRIORITY="critical"
 
 # $LB_INITRAMFS: set initramfs hook
-# (Default: auto)
-LB_INITRAMFS="auto"
+# (Default: live-boot)
+LB_INITRAMFS="live-boot"
 
 # $LB_INITRAMFS_COMPRESSION: set initramfs compression
 # (Default: )
 LB_INITRAMFS_COMPRESSION=""
 
 # $LB_INITSYSTEM: set init system
-# (Default: sysvinit for Devuan)
+# (Default: sysvinit)
 LB_INITSYSTEM="sysvinit"
 
 # $LB_FDISK: set fdisk program
@@ -136,6 +136,6 @@ _QUIET="false"
 # Internal stuff (FIXME)
 APT_OPTIONS="--yes"
 APTITUDE_OPTIONS="--assume-yes"
-GZIP_OPTIONS="-6 --rsyncable"
+GZIP_OPTIONS="-6  --rsyncable"
 ISOHYBRID_OPTIONS=""
 GENISOIMAGE_OPTIONS_EXTRA=""
