@@ -7,7 +7,7 @@ This repository has been set up with a complete Devuan Live ISO build configurat
 ### ✅ Completed Tasks
 
 1. **Configuration Files Created:**
-   - `config/bootstrap` - Devuan Chimaera distribution settings and mirrors
+   - `config/bootstrap` - Devuan Daedalus distribution settings and mirrors
    - `config/common` - Live-build common settings
    - `config/chroot` - Chroot stage configuration
    - `config/binary` - ISO generation settings
@@ -38,7 +38,7 @@ The `validate.sh` script confirms:
 - All configuration files are present and valid
 - Package lists are properly formatted
 - Bootloader configuration exists
-- Distribution is set to Devuan Chimaera
+- Distribution is set to Devuan Daedalus
 - Devuan mirrors are correctly configured
 - `lb config` runs successfully without errors
 
@@ -109,7 +109,7 @@ If the build fails:
 
 ## Technical Details
 
-- **Base Distribution:** Devuan Chimaera (Devuan 4)
+- **Base Distribution:** Devuan Daedalus (Devuan 5)
 - **Init System:** sysvinit
 - **Desktop Environment:** XFCE 4
 - **Kernel:** Linux (from Devuan repositories)

@@ -21,10 +21,10 @@ apt-get install -y live-build debootstrap wget
 
 echo ""
 echo "Step 2: Setting up Devuan debootstrap script..."
-# Create symlink for chimaera to use sid script
-if [ ! -e /usr/share/debootstrap/scripts/chimaera ]; then
-    ln -sf sid /usr/share/debootstrap/scripts/chimaera
-    echo "  Created symlink for chimaera script"
+# Create symlink for daedalus to use sid script
+if [ ! -e /usr/share/debootstrap/scripts/daedalus ]; then
+    ln -sf sid /usr/share/debootstrap/scripts/daedalus
+    echo "  Created symlink for daedalus script"
 fi
 
 echo ""

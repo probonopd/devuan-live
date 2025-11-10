@@ -24,8 +24,7 @@ LB_APT_PIPELINE=""
 LB_APT_RECOMMENDS="true"
 
 # $LB_APT_SECURE: set apt/aptitude security
-# (Default: true)
-# Disabled for Devuan as keyring installation is unreliable
+# (Default: false)
 LB_APT_SECURE="false"
 
 # $LB_APT_SOURCE_ARCHIVES: set apt/aptitude source entries in sources.list

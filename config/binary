@@ -46,13 +46,12 @@ LB_ZSYNC="true"
 LB_BUILD_WITH_CHROOT="true"
 
 # $LB_DEBIAN_INSTALLER: set debian-installer
-# (Default: live)
-# Disabled for live-only ISO
+# (Default: false)
 LB_DEBIAN_INSTALLER="false"
 
 # $LB_DEBIAN_INSTALLER_DISTRIBUTION: set debian-installer suite
 # (Default: empty)
-LB_DEBIAN_INSTALLER_DISTRIBUTION=""
+LB_DEBIAN_INSTALLER_DISTRIBUTION="daedalus"
 
 # $LB_DEBIAN_INSTALLER_PRESEEDFILE: set debian-installer preseed filename/url
 # (Default: )

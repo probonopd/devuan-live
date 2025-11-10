@@ -27,8 +27,8 @@ jobs:
 
       - name: Setup Devuan environment
         run: |
-          # Create symlink for chimaera to use sid script
-          ln -sf sid /usr/share/debootstrap/scripts/chimaera
+          # Create symlink for daedalus to use sid script
+          ln -sf sid /usr/share/debootstrap/scripts/daedalus
           # Create keyring directory (even though we're not using GPG verification)
           mkdir -p /usr/share/keyrings
 
