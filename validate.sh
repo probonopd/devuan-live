@@ -82,11 +82,11 @@ fi
 echo ""
 echo "Checking distribution settings..."
 
-# Check if distribution is set to daedalus
-if grep -q "LB_DISTRIBUTION=\"daedalus\"" config/bootstrap; then
-    pass "Distribution set to daedalus"
+# Check if distribution is set to excalibur
+if grep -q "LB_DISTRIBUTION=\"excalibur\"" config/bootstrap; then
+    pass "Distribution set to excalibur"
 else
-    fail "Distribution not set to daedalus"
+    fail "Distribution not set to excalibur"
 fi
 
 # Check if mirrors point to Devuan
@@ -116,10 +116,10 @@ fi
 echo ""
 echo "Checking debootstrap scripts..."
 
-if [ -f /usr/share/debootstrap/scripts/daedalus ] || [ -L /usr/share/debootstrap/scripts/daedalus ]; then
-    pass "Daedalus debootstrap script exists"
+if [ -f /usr/share/debootstrap/scripts/excalibur ] || [ -L /usr/share/debootstrap/scripts/excalibur ]; then
+    pass "Excalibur debootstrap script exists"
 else
-    fail "Daedalus debootstrap script missing (run: sudo ln -sf sid /usr/share/debootstrap/scripts/daedalus)"
+    fail "Excalibur debootstrap script missing (run: sudo ln -sf sid /usr/share/debootstrap/scripts/excalibur)"
 fi
 
 echo ""

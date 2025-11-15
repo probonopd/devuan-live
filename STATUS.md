@@ -7,7 +7,7 @@ This repository has been set up with a complete Devuan Live ISO build configurat
 ### ✅ Completed Tasks
 
 1. **Configuration Files Created:**
-   - `config/bootstrap` - Devuan Daedalus distribution settings and mirrors
+   - `config/bootstrap` - Devuan Excalibur distribution settings and mirrors
    - `config/common` - Live-build common settings
    - `config/chroot` - Chroot stage configuration
    - `config/binary` - ISO generation settings
@@ -38,7 +38,7 @@ The `validate.sh` script confirms:
 - All configuration files are present and valid
 - Package lists are properly formatted
 - Bootloader configuration exists
-- Distribution is set to Devuan Daedalus
+- Distribution is set to Devuan Excalibur
 - Devuan mirrors are correctly configured
 - `lb config` runs successfully without errors
 
@@ -105,11 +105,11 @@ If the build fails:
 1. Check that Devuan mirrors are accessible from the build environment
 2. Ensure adequate disk space (minimum 10 GB free)
 3. Review build logs in GitHub Actions or local build output
-4. Verify the debootstrap daedalus symlink exists
+4. Verify the debootstrap excalibur symlink exists
 
 ## Technical Details
 
-- **Base Distribution:** Devuan Daedalus (Devuan 5)
+- **Base Distribution:** Devuan Excalibur (Devuan 6)
 - **Init System:** sysvinit
 - **Desktop Environment:** XFCE 4
 - **Kernel:** Linux (from Devuan repositories)
