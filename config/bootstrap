@@ -33,36 +33,36 @@ LB_PARENT_DISTRIBUTION="excalibur"
 LB_PARENT_DEBIAN_INSTALLER_DISTRIBUTION="excalibur"
 
 # $LB_PARENT_MIRROR_BOOTSTRAP: set parent mirror to bootstrap from
-# (Default: http://pkgmaster.devuan.org/merged/)
-LB_PARENT_MIRROR_BOOTSTRAP="http://pkgmaster.devuan.org/merged/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_PARENT_MIRROR_BOOTSTRAP="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_PARENT_MIRROR_CHROOT: set parent mirror to fetch packages from
-# (Default: http://pkgmaster.devuan.org/merged/)
-LB_PARENT_MIRROR_CHROOT="http://pkgmaster.devuan.org/merged/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_PARENT_MIRROR_CHROOT="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_PARENT_MIRROR_CHROOT_SECURITY: set security parent mirror to fetch packages from
-# (Default: http://pkgmaster.devuan.org/merged/)
-LB_PARENT_MIRROR_CHROOT_SECURITY="http://pkgmaster.devuan.org/merged/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_PARENT_MIRROR_CHROOT_SECURITY="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_PARENT_MIRROR_CHROOT_VOLATILE: set volatile parent mirror to fetch packages from
-# (Default: http://pkgmaster.devuan.org/merged/)
-LB_PARENT_MIRROR_CHROOT_VOLATILE="http://pkgmaster.devuan.org/merged/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_PARENT_MIRROR_CHROOT_VOLATILE="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_PARENT_MIRROR_CHROOT_BACKPORTS: set backports parent mirror to fetch packages from
 # (Default: none)
 LB_PARENT_MIRROR_CHROOT_BACKPORTS="none"
 
 # $LB_PARENT_MIRROR_BINARY: set parent mirror which ends up in the image
-# (Default: http://pkgmaster.devuan.org/merged/)
-LB_PARENT_MIRROR_BINARY="http://pkgmaster.devuan.org/merged/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_PARENT_MIRROR_BINARY="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_PARENT_MIRROR_BINARY_SECURITY: set security parent mirror which ends up in the image
-# (Default: http://pkgmaster.devuan.org/merged/)
-LB_PARENT_MIRROR_BINARY_SECURITY="http://pkgmaster.devuan.org/merged/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_PARENT_MIRROR_BINARY_SECURITY="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_PARENT_MIRROR_BINARY_VOLATILE: set volatile parent mirror which ends up in the image
-# (Default: http://pkgmaster.devuan.org/merged/)
-LB_PARENT_MIRROR_BINARY_VOLATILE="http://pkgmaster.devuan.org/merged/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_PARENT_MIRROR_BINARY_VOLATILE="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_PARENT_MIRROR_BINARY_BACKPORTS: set backports parent mirror which ends up in the image
 # (Default: none)
