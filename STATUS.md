@@ -110,6 +110,7 @@ If the build fails:
 ## Technical Details
 
 - **Base Distribution:** Devuan Excalibur (Devuan 6)
+- **Base Distribution:** Devuan Daedalus (Devuan 5)
 - **Init System:** sysvinit
 - **Desktop Environment:** XFCE 4
 - **Kernel:** Linux (from Devuan repositories)

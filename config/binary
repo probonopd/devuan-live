@@ -46,13 +46,12 @@ LB_ZSYNC="true"
 LB_BUILD_WITH_CHROOT="true"
 
 # $LB_DEBIAN_INSTALLER: set debian-installer
-# (Default: live)
-# Disabled for live-only ISO
+# (Default: false)
 LB_DEBIAN_INSTALLER="false"
 
 # $LB_DEBIAN_INSTALLER_DISTRIBUTION: set debian-installer suite
 # (Default: empty)
-LB_DEBIAN_INSTALLER_DISTRIBUTION=""
+LB_DEBIAN_INSTALLER_DISTRIBUTION="daedalus"
 
 # $LB_DEBIAN_INSTALLER_PRESEEDFILE: set debian-installer preseed filename/url
 # (Default: )
@@ -87,8 +86,8 @@ LB_ISO_PREPARER="live-build 3.0~a57-1; http://packages.qa.debian.org/live-build"
 LB_ISO_PUBLISHER="Devuan Live project; https://devuan.org/"
 
 # $LB_ISO_VOLUME: set iso volume (max 32 chars)
-# (Default: Devuan 20251109-20:46)
-LB_ISO_VOLUME="Devuan 20251109-20:46"
+# (Default: Ubuntu bookworm $(date +%Y%m%d-%H:%M))
+LB_ISO_VOLUME="Devuan $(date +%Y%m%d-%H:%M)"
 
 # $LB_EXT_BLOCKSIZE: set EXT block size
 # (Default: unset)

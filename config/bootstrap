@@ -18,7 +18,6 @@ LB_BOOTSTRAP_FLAVOUR=""
 
 # $LB_BOOTSTRAP_KEYRING: set distribution keyring
 # (Default: empty)
-# Note: Leaving empty to avoid signature verification issues with Devuan mirrors
 LB_BOOTSTRAP_KEYRING=""
 
 # $LB_DISTRIBUTION: select distribution to use
