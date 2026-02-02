@@ -14,7 +14,7 @@ LB_BOOTSTRAP_EXCLUDE="usr-is-merged"
 
 # $LB_BOOTSTRAP_FLAVOUR: select flavour to use
 # (Default: empty)
-LB_BOOTSTRAP_FLAVOUR=""
+LB_BOOTSTRAP_FLAVOUR="minbase"
 
 # $LB_BOOTSTRAP_KEYRING: set distribution keyring
 # (Default: empty)
