@@ -10,7 +10,7 @@ LB_BOOTSTRAP_INCLUDE=""
 
 # $LB_BOOTSTRAP_EXCLUDE: exclude packages on base
 # (Default: empty)
-LB_BOOTSTRAP_EXCLUDE=""
+LB_BOOTSTRAP_EXCLUDE="usr-is-merged"
 
 # $LB_BOOTSTRAP_FLAVOUR: select flavour to use
 # (Default: empty)
