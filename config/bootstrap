@@ -6,7 +6,7 @@ LB_ARCHITECTURES="amd64"
 
 # $LB_BOOTSTRAP_INCLUDE: include packages on base
 # (Default: empty)
-LB_BOOTSTRAP_INCLUDE="usrmerge"
+LB_BOOTSTRAP_INCLUDE=""
 
 # $LB_BOOTSTRAP_EXCLUDE: exclude packages on base
 # (Default: empty)

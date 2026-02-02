@@ -29,6 +29,43 @@ jobs:
           wget http://pkgmaster.devuan.org/devuan/pool/main/d/devuan-keyring/devuan-keyring_2025.08.09_all.deb
           sudo dpkg -i devuan-keyring_2025.08.09_all.deb || sudo apt-get install -y -f
           cd -
+          
+          # Patch debootstrap to enable merged-usr
+          # Create a wrapper that sets up merged /usr after package extraction
+          sudo tee /usr/share/debootstrap/functions.d/00-merged-usr > /dev/null << 'EOF'
+          # Override setup_proc to also setup merged-usr
+          original_setup_proc=$(declare -f setup_proc | tail -n +2)
+          
+          setup_proc() {
+              eval "$original_setup_proc"
+              
+              # After proc is set up, create merged /usr if needed
+              if [ -d "$TARGET/bin" ] && [ ! -L "$TARGET/bin" ]; then
+                  info "DEVUAN: Setting up merged /usr layout..."
+                  
+                  for dir in bin sbin lib; do
+                      mkdir -p "$TARGET/usr/$dir"
+                      if [ -d "$TARGET/$dir" ] && [ ! -L "$TARGET/$dir" ]; then
+                          if [ "$(ls -A "$TARGET/$dir" 2>/dev/null)" ]; then
+                              cp -a "$TARGET/$dir"/* "$TARGET/usr/$dir/" 2>/dev/null || true
+                          fi
+                          rm -rf "$TARGET/$dir"
+                          ln -s "usr/$dir" "$TARGET/$dir"
+                      fi
+                  done
+                  
+                  # Handle lib64
+                  if [ -d "$TARGET/lib64" ] && [ ! -L "$TARGET/lib64" ]; then
+                      mkdir -p "$TARGET/usr/lib64"
+                      if [ "$(ls -A "$TARGET/lib64" 2>/dev/null)" ]; then
+                          cp -a "$TARGET/lib64"/* "$TARGET/usr/lib64/" 2>/dev/null || true
+                      fi
+                      rm -rf "$TARGET/lib64"
+                      ln -s "usr/lib64" "$TARGET/lib64"
+                  fi
+              fi
+          }
+          EOF
 
       - name: Configure live-build
         run: |
