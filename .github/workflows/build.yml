@@ -10,17 +10,12 @@ permissions:
 jobs:
   build-iso:
     runs-on: ubuntu-24.04
-    container:
-      image: debian:latest
-      volumes:
-        - /proc:/proc
-      options: --privileged --security-opt seccomp=unconfined
     name: Devuan Live ISO Build
     steps:
       - name: Install dependencies
         run: |
-          apt update
-          apt install -y git sudo live-build curl debootstrap wget
+          sudo apt update
+          sudo apt install -y git sudo live-build curl debootstrap wget
 
       - name: Checkout code
         uses: actions/checkout@v4
@@ -28,23 +23,24 @@ jobs:
       - name: Setup Devuan environment
         run: |
           # Create symlink for excalibur to use sid script
-          ln -sf sid /usr/share/debootstrap/scripts/excalibur
+          sudo ln -sf sid /usr/share/debootstrap/scripts/excalibur
           # Install Devuan keyring
           cd /tmp
           wget http://pkgmaster.devuan.org/devuan/pool/main/d/devuan-keyring/devuan-keyring_2025.08.09_all.deb
-          dpkg -i devuan-keyring_2025.08.09_all.deb || apt-get install -y -f
+          sudo dpkg -i devuan-keyring_2025.08.09_all.deb || sudo apt-get install -y -f
           cd -
 
       - name: Configure live-build
         run: |
-          lb config
+          sudo lb config
 
       - name: Build the ISO
         run: |
-          lb build
+          sudo lb build
           iso_file=$(ls *.iso | head -n 1)
           date_str=$(date +%Y.%m.%d)
-          mv "$iso_file" "devuan-live-${date_str}-amd64.iso"
+          sudo mv "$iso_file" "devuan-live-${date_str}-amd64.iso"
+          sudo chown $USER:$USER "devuan-live-${date_str}-amd64.iso"
 
       - name: Upload files
         env:
