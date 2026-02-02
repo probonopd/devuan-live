@@ -31,6 +31,9 @@ jobs:
           cd -
           
           # Patch debootstrap to enable merged-usr
+          # Create functions.d directory if it doesn't exist
+          sudo mkdir -p /usr/share/debootstrap/functions.d
+          
           # Create a wrapper that sets up merged /usr after package extraction
           sudo tee /usr/share/debootstrap/functions.d/00-merged-usr > /dev/null << 'EOF'
           # Override setup_proc to also setup merged-usr
