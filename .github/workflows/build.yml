@@ -29,8 +29,11 @@ jobs:
         run: |
           # Create symlink for excalibur to use sid script
           ln -sf sid /usr/share/debootstrap/scripts/excalibur
-          # Create keyring directory (even though we're not using GPG verification)
-          mkdir -p /usr/share/keyrings
+          # Install Devuan keyring
+          cd /tmp
+          wget http://pkgmaster.devuan.org/devuan/pool/main/d/devuan-keyring/devuan-keyring_2025.08.09_all.deb
+          dpkg -i devuan-keyring_2025.08.09_all.deb || apt-get install -y -f
+          cd -
 
       - name: Configure live-build
         run: |
