@@ -13,40 +13,40 @@ LB_PARENT_DISTRIBUTION="excalibur"
 LB_PARENT_DEBIAN_INSTALLER_DISTRIBUTION="excalibur"
 
 # $LB_PARENT_MIRROR_BOOTSTRAP: set parent mirror to bootstrap from
-# (Default: http://deb.devuan.org/devuan/)
-LB_PARENT_MIRROR_BOOTSTRAP="http://deb.devuan.org/devuan/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_PARENT_MIRROR_BOOTSTRAP="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_PARENT_MIRROR_CHROOT: set parent mirror to fetch packages from
-# (Default: http://deb.devuan.org/devuan/)
-LB_PARENT_MIRROR_CHROOT="http://deb.devuan.org/devuan/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_PARENT_MIRROR_CHROOT="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_PARENT_MIRROR_CHROOT_SECURITY: set security parent mirror to fetch packages from
-# (Default: http://deb.devuan.org/devuan/)
-LB_PARENT_MIRROR_CHROOT_SECURITY="http://deb.devuan.org/devuan/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_PARENT_MIRROR_CHROOT_SECURITY="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_PARENT_MIRROR_BINARY: set parent mirror which ends up in the image
-# (Default: http://deb.devuan.org/devuan/)
-LB_PARENT_MIRROR_BINARY="http://deb.devuan.org/devuan/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_PARENT_MIRROR_BINARY="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_PARENT_MIRROR_BINARY_SECURITY: set security parent mirror which ends up in the image
 # (Default: http://security.debian.org/)
 LB_PARENT_MIRROR_BINARY_SECURITY="http://security.debian.org/"
 
 # $LB_PARENT_MIRROR_DEBIAN_INSTALLER: set debian-installer parent mirror
-# (Default: http://deb.devuan.org/devuan/)
-LB_PARENT_MIRROR_DEBIAN_INSTALLER="http://deb.devuan.org/devuan/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_PARENT_MIRROR_DEBIAN_INSTALLER="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_MIRROR_BOOTSTRAP: set mirror to bootstrap from
-# (Default: http://deb.devuan.org/devuan/)
-LB_MIRROR_BOOTSTRAP="http://deb.devuan.org/devuan/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_MIRROR_BOOTSTRAP="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_MIRROR_CHROOT: set mirror to fetch packages from
-# (Default: http://deb.devuan.org/devuan/)
-LB_MIRROR_CHROOT="http://deb.devuan.org/devuan/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_MIRROR_CHROOT="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_MIRROR_CHROOT_SECURITY: set security mirror to fetch packages from
-# (Default: http://deb.devuan.org/devuan/)
-LB_MIRROR_CHROOT_SECURITY="http://deb.devuan.org/devuan/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_MIRROR_CHROOT_SECURITY="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_MIRROR_BINARY: set mirror which ends up in the image
 # (Default: http://http.debian.net/debian/)
@@ -57,8 +57,8 @@ LB_MIRROR_BINARY="http://http.debian.net/debian/"
 LB_MIRROR_BINARY_SECURITY="http://security.debian.org/"
 
 # $LB_MIRROR_DEBIAN_INSTALLER: set debian-installer mirror
-# (Default: http://deb.devuan.org/devuan/)
-LB_MIRROR_DEBIAN_INSTALLER="http://deb.devuan.org/devuan/"
+# (Default: http://pkgmaster.devuan.org/devuan/)
+LB_MIRROR_DEBIAN_INSTALLER="http://pkgmaster.devuan.org/devuan/"
 
 # $LB_BOOTSTRAP_QEMU_ARCHITECTURES: architectures to use foreign bootstrap
 # (Default: )
