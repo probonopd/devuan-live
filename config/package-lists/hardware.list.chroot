@@ -1,3 +1,5 @@
+coreutils
+
 xserver-xorg-video-all
 mesa-utils
 mesa-vulkan-drivers
