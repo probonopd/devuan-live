@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+    --architectures amd64 \
+    --distribution excalibur \
+    --parent-distribution excalibur \
+    --parent-mirror-bootstrap "http://deb.devuan.org/devuan/" \
+    --parent-mirror-chroot "http://deb.devuan.org/devuan/" \
+    --parent-mirror-chroot-security "http://deb.devuan.org/devuan/" \
+    --parent-mirror-binary "http://deb.devuan.org/devuan/" \
+    --mirror-bootstrap "http://deb.devuan.org/devuan/" \
+    --mirror-chroot "http://deb.devuan.org/devuan/" \
+    --mirror-chroot-security "http://deb.devuan.org/devuan/" \
+    "${@}"
+
+# After lb config runs, update or add the bootstrap exclusion
+if grep -q "^LB_BOOTSTRAP_EXCLUDE=" config/bootstrap; then
+    sed -i 's/^LB_BOOTSTRAP_EXCLUDE=".*"/LB_BOOTSTRAP_EXCLUDE="usr-is-merged"/' config/bootstrap
+else
+    echo 'LB_BOOTSTRAP_EXCLUDE="usr-is-merged"' >> config/bootstrap
+fi

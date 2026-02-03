@@ -33,3 +33,6 @@ Thumbs.db
 *~
 .vscode/
 .idea/
+wget-log*
+build.sh.bak
+*.iso
