@@ -4,10 +4,6 @@
 # (Default: fat16)
 LB_BINARY_FILESYSTEM="fat16"
 
-# $LB_BINARY_IMAGES: set image type
-# (Default: iso-hybrid)
-LB_BINARY_IMAGES="iso-hybrid"
-
 # $LB_APT_INDICES: set apt/aptitude generic indices
 # (Default: true)
 LB_APT_INDICES="true"
@@ -20,9 +16,9 @@ LB_BOOTAPPEND_LIVE="boot=live quiet splash"
 # (Default: empty)
 LB_BOOTAPPEND_INSTALL=""
 
-# $LB_BOOTAPPEND_FAILSAFE: set boot parameters
+# $LB_BOOTAPPEND_LIVE_FAILSAFE: set boot parameters
 # (Default: empty)
-LB_BOOTAPPEND_FAILSAFE="memtest noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=normal"
+LB_BOOTAPPEND_LIVE_FAILSAFE="boot=live components memtest noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=normal"
 
 # $LB_BOOTLOADER: set bootloader
 # (Default: syslinux)
@@ -89,18 +85,6 @@ LB_ISO_PUBLISHER="Devuan Live project; https://devuan.org/"
 # (Default: Devuan 20260203-00:11)
 LB_ISO_VOLUME="Devuan 20260203-00:11"
 
-# $LB_EXT_BLOCKSIZE: set EXT block size
-# (Default: unset)
-LB_EXT_BLOCKSIZE=""
-
-# $LB_EXT_RESIZEBLOCKS: set EXT resize parameter
-# (Default: unset)
-LB_EXT_RESIZEBLOCKS=""
-
-# $LB_EXT_FUDGEFACTOR: set extra size of EXT images (in %)
-# (Default: unset)
-LB_EXT_FUDGEFACTOR=""
-
 # $LB_JFFS2_ERASEBLOCK: set jffs2 eraseblock size
 # (Default: unset)
 LB_JFFS2_ERASEBLOCK=""
@@ -108,6 +92,10 @@ LB_JFFS2_ERASEBLOCK=""
 # $LB_MEMTEST: set memtest
 # (Default: memtest86+)
 LB_MEMTEST="memtest86+"
+
+# $LB_LOADLIN: set loadlin
+# (Default: false)
+LB_LOADLIN="false"
 
 # $LB_WIN32_LOADER: set win32-loader
 # (Default: true)
@@ -165,6 +153,7 @@ LB_SWAP_FILE_PATH=""
 # (Default: 512)
 LB_SWAP_FILE_SIZE="512"
 
-# $LB_SYSLINUX_THEME: set syslinux theme package
-# (Default: live-build)
-LB_SYSLINUX_THEME="live-build"
+# $LB_BINARY_USE_ORIGINAL_PACKAGES_LIST: don't reconstruct Packages, use original
+# (Default: false)
+LB_BINARY_USE_ORIGINAL_PACKAGES_LIST="false"
+
