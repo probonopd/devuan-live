@@ -134,8 +134,16 @@ echo "Step 7: Building ISO..."
 echo "  This may take 30-60 minutes depending on your internet connection..."
 echo ""
 
-# Set environment variable to help debootstrap find xz-compressed files
+# Set environment variables to help with downloads
 export DEBOOTSTRAP_CHECKSUM_FIELD=SHA256
+# Add retry logic for wget (used by debootstrap)
+export WGETRC=/tmp/wgetrc
+cat > /tmp/wgetrc << '\''EOF_WGET'\''
+tries = 5
+wait = 10
+timeout = 30
+EOF_WGET
+
 lb build
 
 echo ""
