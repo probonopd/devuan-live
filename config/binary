@@ -86,8 +86,8 @@ LB_ISO_PREPARER="live-build 3.0~a57-1; http://packages.qa.debian.org/live-build"
 LB_ISO_PUBLISHER="Devuan Live project; https://devuan.org/"
 
 # $LB_ISO_VOLUME: set iso volume (max 32 chars)
-# (Default: Ubuntu bookworm $(date +%Y%m%d-%H:%M))
-LB_ISO_VOLUME="Devuan $(date +%Y%m%d-%H:%M)"
+# (Default: Devuan 20260203-00:11)
+LB_ISO_VOLUME="Devuan 20260203-00:11"
 
 # $LB_EXT_BLOCKSIZE: set EXT block size
 # (Default: unset)
